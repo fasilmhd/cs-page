@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="This website for creating profile of S4 BSc computer science class students">
+  <meta name="author" content="Fasil Muhammed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <link rel="icon" type="image/png" href="Images/fl-icon.png">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <div class="video">
+    <h3>🎬 Random Videos</h3>
+    <video controls>
+      <source src="Images/video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="audio">
+    <h3>🎵 Music</h3>
+    <audio controls>
+      <source src="Images/Neeyilla Neram - Sooraj S. Kurup, B.K. Harinarayanan.m4a" type="audio/mp4">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+  <script>
+  const vid = document.querySelector("video");
+  window.addEventListener("scroll", () => {
+    const rect = vid.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      vid.style.transform = "scale(1.02)";
+      vid.style.transition = "transform 0.4s";
+    } else {
+      vid.style.transform = "scale(1)";
+    }
+  });
+</script>
+
+<script>
+  const vid = document.querySelector("video");
+  window.addEventListener("scroll", () => {
+    const rect = vid.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      vid.style.transform = "scale(1.02)";
+      vid.style.transition = "transform 0.4s";
+    } else {
+      vid.style.transform = "scale(1)";
+    }
+  });
+</script>
+ <p align="center"><a href="index.html" class="back-home-final">⬅️ Back to Home</a></p>
+  <footer class="navbar">
+    <p align="center">&copy; 2025 BSc CS | Govt. College Kariavattom</p>
+    </footer>
+</body>
+</html>

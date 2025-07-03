@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This website for creating profile of S4 Bsc computer science class students">
+    <meta name="author" content="Fasil Muhammed">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="Images/fl-icon.png">
+      <link rel="stylesheet" href="Style.css">
+      <link rel="stylesheet" href="menu.css">
+      <script src="menu.js" defer></script>
+      
+  <title>Our Memories</title>
+</head>
+<body>
+  <header class="fixed-header">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <nav class="menu-dropdown" id="dropdownMenu">
+        <ul class="main-menu">
+          <li><a href="../index.html">🏠 Home</a></li>
+          <li><a href="../Profile/Profile.html">👥 Profiles</a></li>
+          <li><a href="../Classroom.html">🏫 Classroom</a></li>
+          <li><a href="../fun.html">🎉 Memories</a></li>
+          <li><a href="../contact.html">📞 Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  <h2 align="center">🎉 Our Class Memories</h2>
+
+  <table width="100%" height="600px">
+    <tr>
+     <td width="50%">
+  <iframe id="photoFrame" src="../photo.html" width="100%" height="100%" allowfullscreen></iframe><br>
+  <button class="fullscreen-btn" onclick="makeFullscreen('photoFrame')">🖼️ Fullscreen Photos</button>
+</td>
+<td width="50%">
+  <iframe id="mediaFrame" src="medio.html" width="100%" height="100%" allowfullscreen></iframe><br>
+  <button class="fullscreen-btn" onclick="makeFullscreen('mediaFrame')">🎥 Fullscreen Media</button>
+</td>
+    </tr>
+  </table>
+
+  <p align="center"><a href="index.html" class="back-home-final">⬅️ Back to Home</a></p>
+  <footer class="navbar">
+    <p align="center">&copy; 2025 BSc CS | Govt. College Kariavattom</p>
+  </footer>
+  <script>
+function makeFullscreen(id) {
+  const frame = document.getElementById(id);
+  if (frame.requestFullscreen) {
+    frame.requestFullscreen();
+  } else if (frame.webkitRequestFullscreen) {
+    frame.webkitRequestFullscreen(); // Safari
+  } else if (frame.msRequestFullscreen) {
+    frame.msRequestFullscreen(); // IE11
+  }
+}
+</script>
+  
+</body>
+</html>

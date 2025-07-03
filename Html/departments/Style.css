@@ -1,0 +1,579 @@
+/* =============================
+   Global Reset & Basic Styles
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  /* Using the gradient background from the second file */
+  background: linear-gradient(to bottom right, #f1f7ff, #ffffff);
+  color: #1e3c72;
+}
+
+/* =============================
+   Header & Navigation Layout
+   ============================= */
+.fixed-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixed-header h3 {
+  margin: 0;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+/* Hamburger Icon (visible on mobile only) */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #1e3c72;
+  border-radius: 6px;
+  color: white;
+  display: none; /* hidden on desktop */
+}
+
+/* Desktop Navigation */
+.menu-dropdown {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-dropdown a,
+.dropdown-toggle {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-dropdown a:hover,
+.dropdown-toggle:hover {
+  background-color: #ff9800;
+  color: black;
+}
+
+/* =============================
+   Dropdown & Nested Dropdowns
+   ============================= */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 500;
+}
+.submenu a:hover {
+  background-color: #eef7ff;
+  color: #ff9800;
+}
+
+/* Nested dropdown container */
+.nested {
+  position: relative;
+}
+.nested-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #1e3c72;
+  cursor: pointer;
+}
+.subsubmenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.subsubmenu a {
+  padding: 8px 20px;
+  display: block;
+  color: #1e3c72;
+  text-decoration: none;
+}
+.subsubmenu a:hover {
+  background: #eef7ff;
+  color: #ff9800;
+}
+
+/* Utility Class to Show Dropdowns */
+.show {
+  display: block !important;
+}
+
+/* =============================
+   Responsive Menu (Mobile)
+   ============================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .menu-dropdown {
+    display: none;  /* hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e3c72;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+  }
+  .menu-dropdown a,
+  .dropdown-toggle {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+/* =============================
+   Main Content & Section Styles
+   ============================= */
+main {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  /* Merged properties from both files */
+  background: #ffffff;
+  border: 2px solid #1e3c72;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  padding: 40px 20px; /* using the larger padding from the second file */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  scroll-margin-top: 80px; /* for fixed header offset */
+}
+section:hover {
+  transform: scale(1.01);
+}
+
+h5 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #2a5298;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #2a5298;
+  padding-bottom: 6px;
+}
+
+/* General list style */
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* =============================
+   Footer Styling
+   ============================= */
+footer {
+  background: #1e3c72;
+  color: Orange;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* =============================
+   Faculty List Table Styling
+   ============================= */
+#faculty-list {
+  padding: 30px 15px;
+  background: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+#faculty-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#faculty-list th {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+#faculty-list td {
+  background-color: #ffffff;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#faculty-list tr:nth-child(even) td {
+  background-color: #f5faff;
+}
+
+#faculty-list tr:hover td {
+  background-color: #fffae6;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+#faculty-list img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+#faculty-list a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+#faculty-list a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* =============================
+   Course Details Section
+   ============================= */
+.course-details {
+  background: linear-gradient(to right, #eef7ff, #ffffff);
+  border: 2px solid #1e3c72;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+.course-details h3 {
+  font-size: 26px;
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1e3c72;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.course-details h4 {
+  font-size: 20px;
+  color: #2a5298;
+  margin-bottom: 16px;
+}
+
+.course-details dl {
+  margin: 0;
+}
+
+.course-details dt {
+  font-weight: bold;
+  color: #1e3c72;
+  margin-top: 12px;
+}
+
+.course-details dd {
+  margin-left: 0;
+  padding-left: 12px;
+  border-left: 3px solid #2a5298;
+  margin-bottom: 12px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =============================
+   Back to Top Button
+   ============================= */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  background-color: #1e3c72;
+  color: white;
+  padding: 12px 16px;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: 0.3s;
+}
+.back-to-top:hover {
+  background-color: #ff9800;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* =============================
+   Resources & Links
+   ============================= */
+#resources {
+  padding: 30px;
+  background: #f9fcff;
+  border: 2px solid #1e3c72;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  max-width: 750px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+#resources h3 {
+  color: #1e3c72;
+  font-size: 22px;
+  margin-top: 24px;
+  border-bottom: 2px solid #2a5298;
+  padding-bottom: 6px;
+}
+.link-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+}
+.link-list li {
+  margin: 12px 0;
+}
+.link-list a {
+  text-decoration: none;
+  color: #1e3c72;
+  font-weight: bold;
+  transition: color 0.3s, padding-left 0.3s;
+  position: relative;
+}
+.link-list a::before {
+  content: "📄 ";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  transition: transform 0.3s;
+}
+.link-list a:hover {
+  color: #ff9800;
+  padding-left: 6px;
+}
+
+/* =============================
+   Seminars & Toppers Section
+   ============================= */
+#seminars, #toppers {
+  background: #f0f8ff;
+  border: 2px solid #1e3c72;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#seminars h3, #toppers h3 {
+  color: #1e3c72;
+  font-size: 24px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #2a5298;
+  padding-bottom: 6px;
+}
+
+/* =============================
+   Fancy & Topper Lists
+   ============================= */
+.fancy-list,
+.topper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fancy-list li,
+.topper-list li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+.fancy-list li::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+}
+.topper-list li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+}
+.fancy-list a {
+  color: #1e3c72;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.fancy-list a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* =============================
+   Research Hub Section
+   ============================= */
+#research-hub {
+  background: #eef7ff;
+  border-radius: 16px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 1200px;
+}
+#research-hub h3 {
+  text-align: center;
+  font-size: 28px;
+  color: #1e3c72;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #2a5298;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.research-box {
+  background: white;
+  border-left: 6px solid #1e3c72;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+.research-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.research-box h4 {
+  color: #2a5298;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.research-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.research-box li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: #333;
+}
+.research-box li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #1e3c72;
+}
+
+/* =============================
+   PE-Activities Styling
+   ============================= */
+#pe-activities h4 {
+  display: inline-block;
+  border-bottom: 2px solid #2a5298;
+  position: relative;
+  padding-bottom: 6px;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #1e3c72;
+}
+#pe-activities h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 60%;
+  height: 2px;
+  background: #ff9800;
+  opacity: 0.8;
+}
+
+/* =============================
+   Universal Heading Styling
+   ============================= */
+h1, h2, h3, h4, h5, h6 {
+  color: #6a4fb0;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  position: relative;
+  padding-bottom: 8px;
+  line-height: 1.3;
+}
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border-radius: 2px;
+  /* Transition properties if needed */
+  transition: transform 0.3s, box-shadow 0.3s;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html>
+<head>
+  <title>Feedback</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="This website for creating profile of S4 BSc computer science class students">
+  <meta name="author" content="Fasil Muhammed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Images/fl-icon.png">
+  
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body class="feedback-page">  <header>
+    <h1 align="center">📝 Feedback Form</h1>
+    <p align="center"><em>We would love to hear your thoughts!</em></p>
+    <hr>
+  </header>  <form action="submit_feedback.php" method="post" class="feedback-form" onsubmit="return showMessage();"><fieldset>
+  <legend>👤 Personal Info</legend>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required maxlength="50">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" maxlength="15">
+</fieldset>
+
+<fieldset>
+  <legend>🌟 Rate Our Website</legend>
+  <label><input type="radio" name="rating" value="Excellent"> 🌟🌟🌟🌟🌟 Excellent</label>
+  <label><input type="radio" name="rating" value="Good"> 🌟🌟🌟🌟 Good</label>
+  <label><input type="radio" name="rating" value="Average"> 🌟🌟🌟 Average</label>
+  <label><input type="radio" name="rating" value="Poor"> 🌟🌟 Poor</label>
+</fieldset>
+
+<fieldset>
+  <legend>💖 Favorite Sections</legend>
+  <label><input type="checkbox" name="sections[]" value="Profiles"> 👥 Profiles</label>
+  <label><input type="checkbox" name="sections[]" value="Timetable"> 📅 Timetable</label>
+  <label><input type="checkbox" name="sections[]" value="Fun Corner"> 🎉 Fun Corner</label>
+  <label><input type="checkbox" name="sections[]" value="Memories"> 📸 Memories</label>
+</fieldset>
+
+<fieldset>
+  <legend>💡 Suggestions</legend>
+  <select name="suggestion" required>
+    <option value="">-- Select Suggestion --</option>
+    <option value="Add more photos">📷 Add more photos</option>
+    <option value="Add achievements">🏆 Add individual achievements</option>
+    <option value="Add more videos">🎥 Add more videos</option>
+    <option value="Perfect">👌 Everything is perfect</option>
+  </select>
+</fieldset>
+
+<fieldset>
+  <legend>✍️ Write Feedback</legend>
+  <textarea name="message" rows="5" maxlength="250" placeholder="Write your message here..."></textarea>
+</fieldset>
+
+<div class="form-buttons">
+  <input type="submit" value="✅ Send Feedback">
+  <input type="reset" value="❌ Clear All">
+</div>
+
+  </form>  <div id="success-message" style="display:none; text-align:center; margin-top: 20px; color: green; font-weight: bold;">
+    ✅ Your feedback was submitted successfully!
+  </div>  <p align="center"><a href="index.html" class="back-home-final">🏠 Back to Home</a></p>  <footer class="navbar">
+    <p align="center">&copy; 2025 BSc CS | Govt. College Kariavattom</p>
+  </footer>  <script>
+    function showMessage() {
+      document.getElementById("success-message").style.display = "block";
+      return true;
+    }
+  </script></body>
+</html>

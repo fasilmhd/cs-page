@@ -1,0 +1,70 @@
+.feedback-page {
+  background-color: #dbefff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.feedback-form {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-form fieldset {
+  border: 2px solid #1e3c72;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.feedback-form legend {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1e3c72;
+}
+
+.feedback-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form input[type="tel"],
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.form-buttons {
+  text-align: center;
+}
+
+.form-buttons input {
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-buttons input:hover {
+  background-color: #ff9800;
+  color: black;
+}

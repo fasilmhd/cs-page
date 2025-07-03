@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This website for creating profile of S4 BSc Computer Science class students">
+    <meta name="author" content="Fasil Muhammed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/fl-icon.png">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="../Style.css">
+    <script src="../menu.js" defer></script>
+  </head>
+  <body>
+    <h1 align="center">S4 Computer Science</h1>
+    <h3 align="center">Government College Kariavattom</h3>
+    <h4 align="center">Student Profile</h4>
+    <hr>
+    
+    <header class="fixed-header">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <nav class="menu-dropdown" id="dropdownMenu">
+        <ul class="main-menu">
+          <li><a href="../index.html">🏠 Home</a></li>
+          <li><a href="../Profile/Profile.html">👥 Profiles</a></li>
+          <li><a href="../Classroom.html">🏫 Classroom</a></li>
+          <li><a href="../fun.html">🎉 Memories</a></li>
+          <li><a href="../contact.html">📞 Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2 align="center">Classmate Profiles – Page 1</h2>
+    <p>Our class has 30 students from various parts of Kerala.</p>
+    
+    <div class="students" id="students">
+      <ol class="profile-list">
+        <li><a href="Aashlibinoj.html" class="profile-link"><span>Aashli Binoj</span><img src="../Images/aashlibinoj.jpg" alt="Aashli" width="24"></a></li>
+        <li><a href="Abhijith.html" class="profile-link"><span>Abhijith V</span><img src="../Images/abhijith.jpg" alt="Abhijith" width="24"></a></li>
+        <li><a href="AbishekH.html" class="profile-link"><span>Abishek H</span><img src="../Images/abishekh.jpg" alt="Abishek H" width="24"></a></li>
+        <li><a href="AbishekR.html" class="profile-link"><span>Abishek R</span><img src="../Images/abishek.r.jpg" alt="Abishek R" width="24"></a></li>
+        <li><a href="Ajayajikumar.html" class="profile-link"><span>Ajay Ajikumar</span><img src="../Images/ajayajikumar.jpg" alt="Ajay" width="24"></a></li>
+        <li><a href="Akshay.html" class="profile-link"><span>Akshay S S</span><img src="../Images/akshay.jpg" alt="Akshay" width="24"></a></li>
+        <li><a href="Anamika.html" class="profile-link"><span>Anamika Chandran</span><img src="../Images/anamika.jpg" alt="Anamika" width="24"></a></li>
+        <li><a href="Asitha.html" class="profile-link"><span>Asitha S</span><img src="../Images/asitha.jpg" alt="Asitha" width="24"></a></li>
+        <li><a href="Aswin.html" class="profile-link"><span>Aswinraj U K</span><img src="../Images/aswin.jpg" alt="Aswinraj" width="24"></a></li>
+        <li><a href="Atharva.html" class="profile-link"><span>Atharva Ashok Patil</span><img src="../Images/atharva.jpg" alt="Atharva" width="24"></a></li>
+        <li><a href="Fasil.html" class="profile-link"><span>Fasil Muhammed</span><img src="../Images/fasil.jpg" alt="Fasil" width="24"></a></li>
+        <li><a href="Fathima.html" class="profile-link"><span>Fathima S</span><img src="../Images/fathima.jpg" alt="Fathima" width="24"></a></li>
+        <li><a href="Hemra.html" class="profile-link"><span>Hemra Ashyrov</span><img src="../Images/hemra.jpg" alt="Hemra" width="24"></a></li>
+        <li><a href="Aiswarya.html" class="profile-link"><span>M S Aiswarya</span><img src="../Images/aiswarya.jpg" alt="Aiswarya" width="24"></a></li>
+        <li><a href="Midhun.html" class="profile-link"><span>Midhun Nair M</span><img src="../Images/midhun.jpg" alt="Midhun" width="24"></a></li>
+      </ol>
+    </div>
+
+    <p align="center">
+      <a href="Profiles_Page2.html" class="back-home-final">➡️ Next Page</a>
+      <a href="../index.html" class="back-home-final">🏠 Back to Home</a>
+    </p>
+    
+    <footer class="navbar">
+      <p align="center">&copy; 2023-2026 – BSc CS | Govt. College Kariavattom</p>
+    </footer>
+
+    <script>
+      const profileLinks = document.querySelectorAll(".profile-link");
+      profileLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+          link.classList.add("clicked");
+          setTimeout(() => {
+            link.classList.remove("clicked");
+          }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>

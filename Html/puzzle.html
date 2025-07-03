@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Tech Puzzle Game">
+  <meta name="author" content="Fasil Muhammed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Puzzle Game</title>
+  <link rel="stylesheet" href="Tech.css">
+  <link rel="stylesheet" href="Style1.css">
+  <link rel="icon" type="image/png" href="Images/fl-icon.png">
+  <script src="puzzle-scripe.js"></script>
+</head>
+<body>
+  <h2>🧩 Programming Puzzle &amp; Riddle Game</h2>
+  <div id="scoreDisplay">⭐ Score: <span id="score">0</span>/4</div>
+
+  <div class="question-box">
+    <h3>1. I'm used to build structure, my tags are neat. Without me, websites are incomplete. Who am I?</h3>
+    <button onclick="checkAnswer(this, false)">A.Python</button><br><br>
+    <button onclick="checkAnswer(this, false)">B.C++</button><br><br>
+    <button onclick="checkAnswer(this, true)">C.HTML</button><br><br>
+    <button onclick="checkAnswer(this, false)">D.Php</button><br><br>
+  </div>
+
+  <div class="question-box">
+    <h3>2. Python Output: a = "2"; b = 3; print(a * b)</h3>
+    <button onclick="checkAnswer(this, true)">A.222</button><br><br>
+    <button onclick="checkAnswer(this, false)">B.223</button><br><br>
+    <button onclick="checkAnswer(this, false)">C.221</button><br><br>
+    <button onclick="checkAnswer(this, false)">D.220</button><br><br>
+  </div>
+
+  <div class="question-box">
+    <h3>3. I'm invisible but make your site stylish and alive. I'm not HTML. Who am I?</h3>
+    <button onclick="checkAnswer(this, false)">A.Python and react</button><br><br>
+    <button onclick="checkAnswer(this, 'CSS and JavaScript')">B.CSS and JavaScript</button><br><br>
+    <button onclick="checkAnswer(this, false)">C.Php and C++</button><br><br>
+    <button onclick="checkAnswer(this, false)">D.Python and Ruby</button>
+  </div>
+
+  <div class="question-box">
+    <h3>4. What does this C code print?<br>int a = 5; printf("%d", ++a);</h3>
+    <button onclick="checkAnswer(this, '6')">A.6</button><br><br><button onclick="checkAnswer(this, false)">B.5</button><br><br>
+    <button onclick="checkAnswer(this, false)">C.2</button><br><br>
+    <button onclick="checkAnswer(this, false)">D.7</button>
+  </div>
+
+  <p><a href="index.html" class="back-home-final">⬅️ Back to Home</a></p>
+
+  <footer class="navbar">
+    <p>&copy; 2025 BSc CS | Govt. College Kariavattom</p>
+  </footer>
+
+</body>
+</html>

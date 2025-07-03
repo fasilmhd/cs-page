@@ -1,0 +1,179 @@
+/* =============================
+   Global Reset & Basic Styles
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f1f7ff, #ffffff);
+  color: #1e3c72;
+  scroll-behavior: smooth;
+}
+
+/* =============================
+   Header & Navigation Layout
+   ============================= */
+.fixed-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixed-header h3 {
+  margin: 0;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+/* Hamburger Icon (visible on mobile only) */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #1e3c72;
+  border-radius: 6px;
+  color: white;
+  display: none; /* hidden on desktop */
+}
+
+/* Desktop Navigation */
+.menu-dropdown {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Navigation Links and Dropdown Toggles */
+.menu-dropdown a,
+.dropdown-toggle {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-dropdown a:hover,
+.dropdown-toggle:hover {
+  background-color: #ff9800;
+  color: black;
+}
+
+/* =============================
+   Dropdown & Nested Dropdowns
+   ============================= */
+
+/* Container for Dropdown */
+.dropdown {
+  position: relative;
+}
+/* First-level dropdown: hidden by default */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+/* Submenu links */
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 500;
+}
+.submenu a:hover {
+  background-color: #eef7ff;
+  color: #ff9800;
+}
+
+/* Nested dropdown container */
+.nested {
+  position: relative;
+}
+/* Button for nested level */
+.nested-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #1e3c72;
+  cursor: pointer;
+}
+/* Second-level (nested) dropdown: hidden by default */
+.subsubmenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.subsubmenu a {
+  padding: 8px 20px;
+  display: block;
+  color: #1e3c72;
+  text-decoration: none;
+}
+.subsubmenu a:hover {
+  background: #eef7ff;
+  color: #ff9800;
+}
+
+/* Utility Class to Show Dropdowns */
+.show {
+  display: block !important;
+}
+
+/* =============================
+   Responsive Menu (Mobile)
+   ============================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .menu-dropdown {
+    display: none;  /* hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e3c72;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+  }
+
+  .menu-dropdown a,
+  .dropdown-toggle {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
